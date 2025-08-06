@@ -1,0 +1,14 @@
+<div class="max-w-2xl mx-auto px-4 py-6 flex flex-col gap-4">
+  <rcps-post-item
+    *ngFor="let post of postSrvc.posts()"
+    [post]="post"
+  />
+  
+  <div *ngIf="true" class="text-center text-sm text-gray-500 py-2">
+    Loading more posts...
+  </div>
+
+  <div *ngIf="true" class="text-center text-sm text-gray-400 py-4">
+    You've reached the end.
+  </div>
+</div>

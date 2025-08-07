@@ -1,0 +1,26 @@
+<mat-card class="rounded-2xl shadow p-4 flex flex-col gap-2">
+  <!-- Information and Functions -->
+  <div class="flex justify-between items-center">
+    <div>
+      <h2 class="text-xl font-semibold text-blue-700">{{ dish?.name }}</h2>
+      <p class="text-sm text-gray-600">{{ dish?.description }}</p>
+    </div>
+    
+    <div class="flex gap-2">
+      <button mat-icon-button color="primary" (click)="onEdit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+
+      <button mat-icon-button color="warn" (click)="onDelete()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Short Cook Info -->
+  <div class="text-sm text-gray-700">
+    <span class="mr-4">Time: {{ dish?.cookInfo?.time }}</span>
+    <span class="mr-4">Yield: {{ dish?.cookInfo?.yield }}</span>
+    <span>Serving Size: {{ dish?.cookInfo?.servingSize }}</span>
+  </div>
+</mat-card>

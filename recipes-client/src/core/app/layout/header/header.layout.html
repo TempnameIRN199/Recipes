@@ -1,0 +1,17 @@
+<header class="bg-white shadow p-4 flex justify-between items-center">
+  <div class="text-xl font-bold text-blue-600">
+    Recipes
+  </div>
+
+  <nav class="space-x-4 flex items-center">
+    <!-- Mobile Menu Toggle Button -->
+    <button (click)="onMenuClick()" class="md:hidden text-gray-700 hover:text-black focus:outline-none">
+      Menu
+    </button>
+
+    <!-- Navigation Links -->
+    <a routerLink="/home" routerLinkActive="font-semibold text-blue-500">Home</a>
+    <a routerLink="/login" routerLinkActive="font-semibold text-blue-500">Login</a>
+    <a routerLink="/register" routerLinkActive="font-semibold text-blue-500">Register</a>
+  </nav>
+</header>

@@ -1,0 +1,28 @@
+<mat-card class="shadow rounded-lg p-4">
+  <div class="flex flex-col gap-2">
+    <!-- Main Content -->
+    <p class="text-gray-800 whitespace-pre-line">
+      {{ comment?.text }}
+    </p>
+
+    <!-- Appropriate Functions -->
+    <div class="flex items-center justify-between text-sm text-gray-500">
+      <span>{{ formatDate(comment?.createdAt ?? 0) }}</span>
+
+      <div class="flex gap-4 items-center text-lg text-gray-600">
+        <button (click)="onLike()" mat-icon-button aria-label="Like">
+          <mat-icon>thumb_up</mat-icon>
+        </button>
+        <span>{{ comment?.likes }}</span>
+
+        <button (click)="onDislike()" mat-icon-button aria-label="Dislike">
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+
+        <button (click)="onReport()" mat-icon-button aria-label="Report">
+          <mat-icon>flag</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-card>
